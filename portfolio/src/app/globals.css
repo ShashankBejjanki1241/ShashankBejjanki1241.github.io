@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens you can tweak */
+:root {
+  --bg: 15 15 18;     /* near black */
+  --fg: 242 243 245;  /* near white */
+  --muted: 160 160 175;
+  --accent: 99 102 241; /* indigo-500 */
+}
+
+html, body {
+  height: 100%;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
