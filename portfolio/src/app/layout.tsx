@@ -8,21 +8,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shashank | Software Engineer",
     description: "Projects, skills, and contact in one place.",
-    url: "https://your-domain-or-github-pages-url",
+    url: "https://shashankbejjanki1241.github.io",
     siteName: "Shashank Portfolio",
+    images: [{ url: "/og.svg", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Shashank | Software Engineer",
     description: "Projects, skills, and contact.",
+    images: ["/og.svg"],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased" suppressHydrationWarning>{children}</body>
     </html>
   );
 }

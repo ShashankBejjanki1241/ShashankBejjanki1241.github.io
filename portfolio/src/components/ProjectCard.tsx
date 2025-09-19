@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Project } from "@/content/projects";
 
 export default function ProjectCard({ p }: { p: Project }) {
@@ -7,7 +8,9 @@ export default function ProjectCard({ p }: { p: Project }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img src={p.cover} alt={p.title} className="rounded-xl mb-3 aspect-video object-cover" />
       )}
-      <h3 className="text-lg font-semibold">{p.title}</h3>
+      <h3 className="text-lg font-semibold">
+        <Link href={`/projects/${p.slug}/`} className="hover:underline">{p.title}</Link>
+      </h3>
       <p className="mt-1 text-sm text-white/80">{p.summary}</p>
       {p.impact && <p className="mt-2 text-xs text-indigo-300">{p.impact}</p>}
       <div className="mt-3 flex flex-wrap gap-2">

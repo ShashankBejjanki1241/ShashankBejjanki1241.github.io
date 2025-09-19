@@ -1,0 +1,7 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="#0F0F12"/>
+<rect x="100" y="150" width="1000" height="330" rx="20" fill="#1F2937"/>
+<text x="600" y="280" fill="#6366F1" font-family="monospace" font-size="48" font-weight="bold" text-anchor="middle">Shashank</text>
+<text x="600" y="340" fill="#F3F4F6" font-family="monospace" font-size="24" text-anchor="middle">Software Engineer</text>
+<text x="600" y="380" fill="#9CA3AF" font-family="monospace" font-size="18" text-anchor="middle">Full-stack developer crafting high-performance web apps</text>
+</svg>

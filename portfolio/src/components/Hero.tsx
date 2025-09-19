@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
-      <p className="text-sm uppercase tracking-widest text-white/60">Hello, I'm</p>
+      <p className="text-sm uppercase tracking-widest text-white/60">Hello, I&apos;m</p>
       <h1 className="mt-2 text-4xl sm:text-6xl font-bold leading-tight">
         Shashank <span className="text-indigo-400">Bejjanki</span>
       </h1>
