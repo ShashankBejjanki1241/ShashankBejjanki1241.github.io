@@ -1,9 +1,16 @@
+import { M } from "./motion";
 import Link from "next/link";
 import { Project } from "@/content/projects";
 
 export default function ProjectCard({ p }: { p: Project }) {
   return (
-    <article className="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition">
+    <M.article
+      whileHover={{ y: -3 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition"
+      role="article"
+      aria-label={p.title}
+    >
       {p.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={p.cover} alt={p.title} className="rounded-xl mb-3 aspect-video object-cover" />
@@ -19,9 +26,9 @@ export default function ProjectCard({ p }: { p: Project }) {
         ))}
       </div>
       <div className="mt-4 flex gap-3">
-        {p.repo && <a className="text-sm underline" href={p.repo} target="_blank">Code</a>}
-        {p.demo && <a className="text-sm underline" href={p.demo} target="_blank">Live</a>}
+        {p.repo && <a className="text-sm underline" href={p.repo} target="_blank" rel="noreferrer">Code</a>}
+        {p.demo && <a className="text-sm underline" href={p.demo} target="_blank" rel="noreferrer">Live</a>}
       </div>
-    </article>
+    </M.article>
   );
 }

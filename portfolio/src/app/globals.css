@@ -3,15 +3,47 @@
 @tailwind utilities;
 
 /* Design tokens you can tweak */
-:root {
+:root,
+:root[data-theme="dark"] {
   --bg: 15 15 18;     /* near black */
   --fg: 242 243 245;  /* near white */
   --muted: 160 160 175;
   --accent: 99 102 241; /* indigo-500 */
+  --glow: 118 69 217;
+}
+
+:root[data-theme="light"] {
+  --bg: 250 250 252;
+  --fg: 20 20 24;
+  --muted: 100 100 115;
+  --accent: 88 80 236;
+}
+
+:root[data-theme="neon"] {
+  --bg: 3 5 14;
+  --fg: 230 255 255;
+  --muted: 100 230 230;
+  --accent: 0 255 196;
+  --glow: 0 255 196;
 }
 
 html, body {
   height: 100%;
   background-color: rgb(var(--bg));
   color: rgb(var(--fg));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optional neon glow on buttons */
+:root[data-theme="neon"] a,
+:root[data-theme="neon"] button {
+  text-shadow: 0 0 10px rgba(var(--glow), 0.6);
+  box-shadow: 0 0 14px rgba(var(--glow), 0.2);
 }
